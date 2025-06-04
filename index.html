@@ -4,23 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Starry Night Background</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+      crossorigin="anonymous">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <canvas id="starry-night"></canvas>
-  <div class="content">
-    <h1>Hi, I'm Reece!</h1>
-    <p>I'm a Full Stack Software Engineer with over 13 years of industry experience</p>
-    <button id="linkedin-button">Connect on LinkedIn</button>
-    <button id ="about-button">About Me</button>
-    <button id="resume-button">View my CV</button>
-    <button id="toggle-stars">Toggle Stars</button>
-
+<div class="container content text-center py-5">
+  <h1 class="mb-3">Hi, I'm Reece!</h1>
+  <p class="lead mb-4">I'm a Full Stack Software Engineer with over 13 years of industry experience</p>
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <button id="linkedin-button" class="btn btn-primary">Connect on LinkedIn</button>
+    <button id="about-button" class="btn btn-secondary">About Me</button>
+    <button id="resume-button" class="btn btn-success">View my CV</button>
+    <button id="toggle-stars" class="btn btn-outline-light">Toggle Stars</button>
   </div>
+  <div id="about-section" class="mt-5" style="display:none;">
+  <div class="card bg-black text-white mx-auto" style="max-width: 600px;">
+    <div class="card-body">
+      <h2 class="card-title mb-3">About Me</h2>
+      <p class="card-text">
+        I'm passionate about building robust, scalable web applications and delivering high-quality software solutions. My experience spans frontend and backend development, DevOps, and cloud infrastructure. I enjoy collaborating with teams and mentoring junior developers.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+        crossorigin="anonymous"></script>
+
   <script src="script.js"></script>
 
-
+<script>
+    // Fade in About section on button click
+    $(document).ready(function() {
+      $('#about-button').on('click', function() {
+        $('#about-section').fadeIn();
+      });
+    });
+  </script>
 </body>
 </html>
